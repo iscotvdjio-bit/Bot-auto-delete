@@ -60,10 +60,12 @@ class AutoModBot(commands.Bot):
 
 # ── Run ───────────────────────────────────────────────────────────────────────
 async def main():
-    token = os.getenv("DISCORD_TOKEN")
+    token = os.environ.get("DISCORD_TOKEN")
     if not token:
-        log.critical("DISCORD_TOKEN not found in environment variables!")
-        return
+        raise RuntimeError(
+            "DISCORD_TOKEN tidak ditemukan! "
+            "Pastikan sudah diset di Railway → Variables → DISCORD_TOKEN"
+        )
     async with AutoModBot() as bot:
         await bot.start(token)
 

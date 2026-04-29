@@ -1,18 +1,16 @@
-# Environment
+# Environment — JANGAN pernah di-push!
 .env
 
 # Database
+data/
 *.db
 *.db-wal
 *.db-shm
 
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-.venv/
-venv/
-*.egg-info/
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
 
 # OS
 .DS_Store

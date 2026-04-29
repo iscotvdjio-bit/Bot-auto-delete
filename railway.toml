@@ -1,7 +1,8 @@
+
 [build]
 builder = "nixpacks"
 
 [deploy]
-startCommand = "python bot.py"
+startCommand = "node src/index.js"
 restartPolicyType = "on_failure"
-restartPolicyMaxRetries = 5
+restartPolicyMaxRetries = 10

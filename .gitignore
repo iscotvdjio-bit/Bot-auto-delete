@@ -1,0 +1,17 @@
+# Environment — JANGAN pernah di-push!
+.env
+
+# Database
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
